@@ -1,0 +1,166 @@
+import random
+import sys
+a = "50"
+b = "45"
+c = "40"
+d = "35"
+e = "30"
+f = "25"
+g = "20"
+h = "15"
+i = "10"
+j = " 5"
+'''row1 = [a, a, a, a, a, a, a, a, a, a] #declare lists 
+row2 = [b, b, b, b, b, b, b, b, b, b] 
+row3 = [c, c, c, c, c, c, c, c, c, c] 
+row4 = [d, d, d, d, d, d, d, d, d, d] 
+row5 = [e, e, e, e, e, e, e, e, e, e] 
+row6 = [f, f, f, f, f, f, f, f, f, f] 
+row7 = [g, g, g, g, g, g, g, g, g, g] 
+row8 = [h, h, h, h, h, h, h, h, h, h] 
+row9 = [i, i, i, i, i, i, i, i, i, i] 
+row10 = [j, j, j, j, j, j, j, j, j, j] '''
+
+row1 = [a, a, " X", " X", " X", " X", " X", " X", " X"," X"] #declare lists 
+row2 = [" X", " X", " X", " X", " X", " X", " X", " X", " X"," X"] 
+row3 = [" X", " X", " X", " X", " X", " X", " X", " X", " X"," X"] 
+row4 = [" X", " X", " X", " X", " X", " X", " X", " X", " X"," X"] 
+row5 = [" X", " X", " X", " X", " X", " X", " X", " X", " X"," X"] 
+row6 = [" X", " X", " X", " X", " X", " X", " X", " X", " X"," X"] 
+row7 = [" X", " X", " X", " X", " X", " X", " X", " X", " X"," X"] 
+row8 = [" X", " X", " X", " X", " X", " X", " X", " X", " X"," X"] 
+row9 = [" X", " X", " X", " X", " X", " X", " X", " X", " X"," X"] 
+row10 = [" X", " X", " X", " X", " X", " X", " X", " X", " X"," X"] 
+
+rows = [row10, row9, row8, row7, row6, row5, row4, row3, row2, row1] #list of list to make print easyier 
+def display(): #display the seats 
+    x = 0
+    while (x < 10):
+        print(rows[x])
+        x +=1
+sold = False
+def soldout():
+    i = 0
+    
+    while (i < 10):
+        
+        if (row1[i] != " X"):
+            break
+        elif (row2[i] != " X"):
+            break
+        elif (row3[i] != " X"):
+            break
+        elif (row4[i] != " X"):
+            break
+        elif (row5[i] != " X"):
+            break
+        elif (row6[i] != " X"):
+            break
+        elif (row7[i] != " X"):
+            break
+        elif (row8[i] != " X"):
+            break
+        elif (row9[i] != " X"):
+            break
+        elif (row10[i] != " X"):
+            break
+        elif (i == 9):
+            sold = True
+            print("sorry all of our seats are now sold out")
+            sys.exit()
+        i = i+1
+            
+        
+def main():
+    display() #call display function
+    rowchoice = int(input("what row would you like to sit in? ")) # ask for seat selection 
+    colchoice = int(input("what seat in the row would you like to sit in? "))
+    if (rowchoice == 1): #LONG IFELSE CHAIN 
+        if (row1[colchoice- 1] == " X"):
+            print("that seat is already taken, please pick a different seat.") #tell user that the seats taken 
+            main()
+    elif (rowchoice == 2):
+        if (row2[colchoice- 1] == " X"):
+            print("that seat is already taken, please pick a different seat.")
+            main()
+    elif (rowchoice == 3):
+        if (row3[colchoice- 1] == " X"):
+            print("that seat is already taken, please pick a different seat.")
+            main()
+    elif (rowchoice == 4):
+        if (row4[colchoice- 1] == " X"):
+            print("that seat is already taken, please pick a different seat.")
+            main()
+    elif (rowchoice == 5):
+        if (row5[colchoice- 1] == " X"):
+            print("that seat is already taken, please pick a different seat.")
+            main()
+    elif (rowchoice == 6):
+        if (row6[colchoice- 1] == " X"):
+            print("that seat is already taken, please pick a different seat.")
+            main()
+    elif (rowchoice == 7):
+        if (row7[colchoice- 1] == " X"):
+            print("that seat is already taken, please pick a different seat.")
+            main()
+    elif (rowchoice == 8):
+        if (row8[colchoice- 1] == " X"):
+            print("that seat is already taken, please pick a different seat.")
+            main()
+    elif (rowchoice == 9):
+        if (row9[colchoice- 1] == " X"):
+            print("that seat is already taken, please pick a different seat.")
+            main()
+    elif (rowchoice == 10):
+        if (row10[colchoice- 1] == " X"):
+            print("that seat is already taken, please pick a different seat.")
+            main()
+    if (rowchoice == 1): # if the choice gets through all that it goes here to be set to X
+        print("the price of that seat $50")
+        print("thank you for buying seat ", colchoice, ", row 1.")
+        row1[colchoice- 1] = " X"
+    elif (rowchoice == 2):
+        print("the price of that seat $45")
+        print("thank you for buying seat ", colchoice, ", row 2.")
+        row2[colchoice- 1] = " X"
+    elif (rowchoice == 3):
+        print("the price of that seat $40")
+        print("thank you for buying seat ", colchoice, ", row 3.")
+        row3[colchoice- 1] = " X"
+    elif (rowchoice == 4):
+        print("the price of that seat $35")
+        print("thank you for buying seat ", colchoice, ", row 4.")
+        row4[colchoice- 1] = " X"
+    elif (rowchoice == 5):
+        print("the price of that seat $30")
+        print("thank you for buying seat ", colchoice, ", row 5.")
+        row5[colchoice- 1] = " X"
+    elif (rowchoice == 6):
+        print("the price of that seat $25")
+        print("thank you for buying seat ", colchoice, ", row 6.")
+        row6[colchoice- 1] = " X"
+    elif (rowchoice == 7):
+        print("the price of that seat $20")
+        print("thank you for buying seat ", colchoice, ", row 7.")
+        row7[colchoice- 1] = " X"
+    elif (rowchoice == 8):
+        print("the price of that seat $15")
+        print("thank you for buying seat ", colchoice, ", row 8.")
+        row8[colchoice- 1] = " X"
+    elif (rowchoice == 9):
+        print("the price of that seat $10")
+        print("thank you for buying seat ", colchoice, ", row 9.")
+        row9[colchoice- 1] = " X"
+    elif (rowchoice == 10):
+        print("the price of that seat $5")
+        print("thank you for buying seat ", colchoice, ", row 10.")
+        row10[colchoice- 1] = " X"
+    input("press enter to continue")
+    display()
+    soldout()
+    rep = str(input("would you like to select another seat? ")) #ask for another seat 
+    if (rep == "no"):
+        return #end program 
+    else:
+        main() #repeat if another seat is chosen 
+main()
